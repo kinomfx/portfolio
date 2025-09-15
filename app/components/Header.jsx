@@ -4,7 +4,7 @@ import { assets } from '@/assets/assets';
 
 const Header = () => {
   return (
-    <div className='w-10/12 max-w-3xl text-center mx-auto flex flex-col items-center justify-center gap-4 h-screen pt-24 sm:pt-32 md:pt-36'>
+    <div className='w-10/12 max-w-3xl text-center mx-auto flex flex-col items-center justify-center gap-4 h-screen pt-24 sm:pt-32 md:pt-36 pb-10'>
       <div>
         <Image
           src={assets.profile_img}
@@ -28,7 +28,7 @@ const Header = () => {
         <span className='font-medium'>Web Development, Problem Solving, and System Design</span>, I love turning ideas into efficient and scalable applications. Always eager to learn, innovate, and contribute to the tech community.
       </p>
 
-      <div className='flex flex-col sm:flex-row items-center gap-4 mt-4 w-full justify-center'>
+      <div className='flex flex-col sm:flex-row items-center gap-2 mt-4 w-full justify-center'>
         <a
           href="#contact"
           className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 text-center'
