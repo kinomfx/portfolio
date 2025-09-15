@@ -102,3 +102,26 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         ref={sideMenuref}
         className={`md:hidden flex flex-col gap-4 py-20 px-6 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen transition-all duration-500 ${
           darkMode ? "bg-gray-900 text-white" : "bg-white text-black"
+        }`}
+      >
+        <div className="absolute top-6 right-6">
+          <Image
+            src={darkMode ? assets.close_white : assets.close_black}
+            alt="Close Menu"
+            className="w-6 cursor-pointer"
+            onClick={closeMenu}
+          />
+        </div>
+        {["Home", "About", "Services", "My Work", "Contact"].map((item) => (
+          <li key={item}>
+            <a href={`#${item.toLowerCase().replace(" ", "")}`} className="font-ovo" onClick={closeMenu}>
+              {item}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
+
+export default Navbar;
