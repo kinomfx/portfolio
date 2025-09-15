@@ -47,7 +47,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
       {/* Desktop Menu */}
       <ul
-        className={`hidden md:flex items-center gap-6 lg:gap-8 text-base px-4 py-2 transition-all duration-500 ${
+        className={`hidden md:flex items-center gap-6 lg:gap-8 text-base px-4 py-2 transition-all duration-500 rounded-full ${
           scroll ? "" : darkMode ? "bg-gray-800 shadow-sm" : "bg-white shadow-sm"
         }`}
       >
