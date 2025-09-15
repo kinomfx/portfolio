@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { assets } from '@/assets/assets'
 const Header = () => {
   return (
-    <div className='w-10/12 max-w-3xl text-center mx-auto  flex flex-col items-center justify-center gap-4 h-screen' >
+    <div className='w-10/12 max-w-3xl text-center mx-auto  flex flex-col items-center justify-center gap-4 h-screen mt-20' >
       <div>
         <Image src={assets.profile_img} alt='' className='rounded-full w-30 hover:w-50  transition-all duration-500'/>
       </div>
