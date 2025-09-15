@@ -27,15 +27,11 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
   return (
     <nav
-      className={`w-full fixed px-5 lg:px-8 xl:px-[8%] flex items-center z-50 justify-between transition-all duration-300 backdrop-blur ${
-    scroll
-      ? darkMode
-        ? "bg-gray-900/70 text-white shadow-md"
-        : "bg-white/70 text-black shadow-md"
-      : darkMode
-      ? "bg-gray-900 text-white"
-      : "bg-white text-black"
-  }`}
+      className={`w-full fixed px-5 lg:px-8 xl:px-[8%] flex items-center z-50 justify-between transition-all duration-300 ${
+        scroll
+          ? "shadow-md bg-opacity-50 backdrop-blur-lg"
+          : ""
+      } ${darkMode ? "bg-gray-900 text-white" : "bg-white text-black"}`}
     >
       <a href="#top">
         <Image src={darkMode?assets.logo_dark:assets.logo} className="w-28 cursor-pointer" alt="" />
