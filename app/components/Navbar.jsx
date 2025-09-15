@@ -23,9 +23,11 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const menuItems = ["Home", "About", "Services", "My Work", "Contact"];
+
   return (
     <nav
-      className={`w-full fixed top-0 left-0 z-50 flex items-center justify-between transition-all duration-300 backdrop-blur  ${
+      className={`w-full fixed top-0 left-0 z-50 flex items-center justify-between transition-all duration-300 backdrop-blur ${
         scroll
           ? darkMode
             ? "bg-gray-900/70 text-white shadow-md"
@@ -34,13 +36,13 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           ? "bg-gray-900 text-white"
           : "bg-white text-black"
       }`}
-      style={{ height: "60px" }}
+      style={{ height: "50px" }}
     >
       {/* Logo */}
       <a href="#top" className="ml-4 md:ml-0">
         <Image
           src={darkMode ? assets.logo_dark : assets.logo}
-          className="w-28"
+          className="w-24"
           alt="Logo"
         />
       </a>
@@ -51,7 +53,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           scroll ? "" : darkMode ? "bg-gray-800 shadow-sm" : "bg-white shadow-sm"
         }`}
       >
-        {["Home", "About", "Services", "My Work", "Contact"].map((item) => (
+        {menuItems.map((item) => (
           <li key={item}>
             <a
               href={`#${item.toLowerCase().replace(" ", "")}`}
@@ -65,11 +67,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
       {/* Right Buttons */}
       <div className="flex items-center gap-3 mr-4 md:mr-0">
-        <button
-          className="p-1"
-          onClick={() => setDarkMode(!darkMode)}
-          aria-label="Toggle Dark Mode"
-        >
+        <button onClick={() => setDarkMode(!darkMode)}>
           <Image
             src={darkMode ? assets.sun_icon : assets.moon_icon}
             alt="Theme Icon"
@@ -92,7 +90,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           <Image
             src={darkMode ? assets.menu_white : assets.menu_black}
             alt="Menu"
-            className="w-6"
+            className="w-5"
           />
         </button>
       </div>
@@ -100,21 +98,26 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       {/* Mobile Menu */}
       <ul
         ref={sideMenuref}
-        className={`md:hidden flex flex-col gap-4 py-10 px-6 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen transition-all duration-500 ${
+        className={`md:hidden flex flex-col gap-3 py-8 px-4 fixed -right-64 top-0 bottom-0 w-56 z-50 transition-all duration-500 overflow-y-auto ${
           darkMode ? "bg-gray-900 text-white" : "bg-white text-black"
         }`}
+        style={{ maxHeight: "calc(100vh - 10px)" }}
       >
-        <div className="absolute top-6 right-6">
+        <div className="absolute top-4 right-4">
           <Image
             src={darkMode ? assets.close_white : assets.close_black}
             alt="Close Menu"
-            className="w-6 cursor-pointer"
+            className="w-5 cursor-pointer"
             onClick={closeMenu}
           />
         </div>
-        {["Home", "About", "Services", "My Work", "Contact"].map((item) => (
+        {menuItems.map((item) => (
           <li key={item}>
-            <a href={`#${item.toLowerCase().replace(" ", "")}`} className="font-ovo" onClick={closeMenu}>
+            <a
+              href={`#${item.toLowerCase().replace(" ", "")}`}
+              className="font-ovo py-2 block"
+              onClick={closeMenu}
+            >
               {item}
             </a>
           </li>

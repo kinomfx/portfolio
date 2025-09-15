@@ -9,8 +9,9 @@ const Header = () => {
         <Image
           src={assets.profile_img}
           alt=''
-          className='rounded-full w-30 hover:w-50 transition-all duration-500'
+          className="rounded-full hover:md:w-50  w-24 sm:w-32 md:w-35 lg:w-40  transition-all duration-500"
         />
+
       </div>
       <h3 className='flex items-end gap-2 text-xl md:text-2xl mb-3'>
         Hi! I am Monik Rayu <Image src={assets.hand_icon} alt='' className='w-6' />
