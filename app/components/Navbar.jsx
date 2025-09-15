@@ -100,7 +100,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       {/* Mobile Menu */}
       <ul
         ref={sideMenuref}
-        className={`md:hidden flex flex-col gap-4 py-20 px-6 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen transition-all duration-500 ${
+        className={`md:hidden flex flex-col gap-4 py-10 px-6 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen transition-all duration-500 ${
           darkMode ? "bg-gray-900 text-white" : "bg-white text-black"
         }`}
       >
