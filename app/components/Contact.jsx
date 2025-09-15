@@ -28,7 +28,7 @@ const Contact = ({darkMode}) => {
   return (
     <div 
   id='contact' 
-  className='w-full min-h-[400px] px-[12%] py-10 scroll-mt-20 bg-cover bg-no-repeat bg-center bg-[length:90%_auto]' 
+  className='w-full min-h-[400px] px-[12%] py-10 scroll-mt-10 bg-cover bg-no-repeat bg-center bg-[length:90%_auto]' 
   style={{ backgroundImage: "url('/footer-bg-color.png')" }}
 >
   <h4 className='text-center mb-2 text-lg'>Contact Me</h4>
