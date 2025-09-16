@@ -4,7 +4,7 @@ import React from 'react'
 import Image from 'next/image'
 const About = ({darkMode , setDarkMode}) => {
   return (
-    <div id='about' className='w-full px-[12%] py-10 scroll-mt-15 pt-20'>
+    <div id='about' className='w-full px-[12%] pt-30 scroll-mt-20'>
       <h4 className='text-center mb-2 text-lg'>Introduction</h4>
       <h2 className='text-center text-5xl'>About me </h2>
       <div className='flex w-full flex-col lg:flex-row items-center gap-20 my-20'>
