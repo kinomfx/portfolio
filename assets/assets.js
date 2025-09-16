@@ -90,7 +90,7 @@ export const workData = [
         title: 'Frontend project',
         description: 'Sound Sage - Musical Note Transition System',
         bgImage: '/work-1.png',
-        link:'https://github.com/kinomfx/virtual-mouse'
+        link:'https://github.com/kinomfx/SoundSage'
     },
     {
         title: 'Geo based app',
