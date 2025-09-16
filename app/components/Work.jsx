@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Work = ({darkMode , setDarkMode}) => {
   return (
-    <div id='work' className='w-full px-[12%] py-10 scroll-mt-10'>
+    <div id='mywork' className='w-full px-[12%] py-10 scroll-mt-10'>
       <h4 className='text-center mb-2 text-lg'>Portfolio</h4>
       <h2 className='text-center text-5xl'>My Work</h2>
       <p className='text-center max-w-2xl mx-auto mt-5 mb-12'>

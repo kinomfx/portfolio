@@ -98,10 +98,10 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       {/* Mobile Menu */}
       <ul
         ref={sideMenuref}
-        className={`md:hidden flex flex-col gap-3 py-8 px-4 fixed -right-64 top-0 bottom-0 w-56 z-50 transition-all duration-500 overflow-y-auto ${
-          darkMode ? "bg-gray-900 text-white" : "bg-white text-black"
+        className={`md:hidden flex flex-col gap-3 py-8 px-4 fixed -right-64 top-0 w-56 z-40 transition-all duration-500 overflow-y-auto h-screen ${
+          darkMode ? "bg-gray-900 text-white" : "bg-[#EED9C4] text-black"
         }`}
-        style={{ maxHeight: "calc(100vh - 10px)" }}
+        
       >
         <div className="absolute top-4 right-4">
           <Image
@@ -123,6 +123,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           </li>
         ))}
       </ul>
+
     </nav>
   );
 };
